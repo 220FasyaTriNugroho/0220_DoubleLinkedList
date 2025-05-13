@@ -167,7 +167,7 @@ void traverse()
         cout << "\nnRecord in ascending order of roll number are:" << endl;
         Node *currentNode = START;
         while (currentNode != NULL)
-            currentNode= currentNode->next;
+            currentNode = currentNode->next;
 
         while (currentNode != NULL)
         {
@@ -197,5 +197,31 @@ void searchData()
         cout << "\nRoll number: " << curr->noMhs << endl;
         cout << "\nName: " << curr->name << endl;
     }
-    
+}
+
+int main()
+{
+    // perulangan selama bernilai benar untuk program utama double linkedlist
+    while (true)
+    {
+        try
+        {
+            cout << endl
+                 << "Menu";
+            cout << endl
+                 << "1. Menambah data kedalam list" << endl;
+            cout << "2. Menghapus data dari dalam list" << endl;
+            cout << "3. Menampilkan semua data didalam list dengan meningkat" << endl;
+            cout << "4. Menampilkan semua data didalam list dengan meningkat" << endl;
+            cout << "5. Mencari data dalam list" << endl;
+            cout << "6. keluar" << endl;
+            cout << endl
+                 << "Masukkan pilihan (1-5): "; 
+                char ch;
+            cin >> ch;
+        }
+
+
+        
+    }
 }

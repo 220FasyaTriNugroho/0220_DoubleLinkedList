@@ -85,7 +85,7 @@ void addNode()
         //konidisi jika if previous sama dengan null
         else
         {
-            //if previous is sill NULL, it means newNode is now the first node
+            //if previous is sill NULL, it means newNode is nows the first node
             START = newNode;
         }
     }

@@ -33,5 +33,6 @@ void addNode()
     {
         //step 2: insert the new node at the beginning
         //kondisi jika start tidak kosong dan noMhs node baru sama dengan noMhs
+        if (START != NULL && newNode->noMhs == START->noMhs)
     }
 }

@@ -132,6 +132,20 @@ void deleteNode()
     //node to be deleted in the first node
     if (current = START)
     {
+        START = START->next; //step 2: update the START pointer
+        if (START != NULL)
+        {
+            START-> prev = NULL;
+        }
+        
+    }
+    else
+    { //node to the deleted is not the first node
+        previous->next = current->next;
+        if (current->next != NULL)
+        {   // if there's a successor, update its prev pointer
+            current->next->prev = previous;
+        }
         
     }
 

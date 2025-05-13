@@ -22,5 +22,6 @@ void addNode()
 
     // pembuatan node dan pemberian value untuk data noMhs dan name
     Node *newNode = new Node(); //step 1 buat node baru
-
+    cout << "\nEmter the roll number of the student: ";
+    cin >> newNode->noMhs; //assign value to the data field of the new node
 }

@@ -43,7 +43,7 @@ void addNode()
         //kondisi jika start tidak memiliki nilai atau tidak kosong
         if (START!= NULL)
         {
-            
+            START->prev = newNode; // step 4: make the first node point the 
         }
     }
 }

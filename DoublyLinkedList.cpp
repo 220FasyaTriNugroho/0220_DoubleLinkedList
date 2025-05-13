@@ -177,6 +177,25 @@ void traverse()
     }
 }
 
+void revtraverse()
+{
+    if (listEmpty())
+        cout << "\nList is empty" << endl;
+    else
+    {
+        cout << "\nRecords in descending order of roll number are:" << endl;
+        Node *currentNode = START;
+        while (currentNode->next != NULL)
+            currentNode = currentNode->next;
+
+        while (currentNode != NULL)
+        {
+            cout << currentNode->noMhs << " " << currentNode->name << endl;
+            currentNode = currentNode->prev;
+        }
+    }
+}
+
 void searchData()
 {
     if (listEmpty() == true)
@@ -212,16 +231,41 @@ int main()
                  << "1. Menambah data kedalam list" << endl;
             cout << "2. Menghapus data dari dalam list" << endl;
             cout << "3. Menampilkan semua data didalam list dengan meningkat" << endl;
-            cout << "4. Menampilkan semua data didalam list dengan meningkat" << endl;
+            cout << "4. Menampilkan semua data didalam list dengan menurun" << endl;
             cout << "5. Mencari data dalam list" << endl;
             cout << "6. keluar" << endl;
             cout << endl
-                 << "Masukkan pilihan (1-5): "; 
-                char ch;
+                 << "Masukkan pilihan (1-6): "; 
+            char ch;
             cin >> ch;
+            
+            switch (ch)
+            {
+                case '1':
+                    addNode();
+                    break;
+                case '2':
+                    deleteNode();
+                    break;
+                case '3':
+                    traverse();
+                    break;
+                case '4':
+                    revtraverse();
+                    break;
+                case '5':
+                    searchData();
+                    break;
+                case '6':
+                    return 0;
+                default:
+                    cout << "\nInvalid Option" << endl;
+                    break;
+            }
         }
-
-
-        
+        catch (exception &e)
+        {
+            cout << "Chech for the values entered." << endl;
+        }
     }
 }
